@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
-mongoose.connect('mongodb+srv://blog:C2AvLEpXjgiOVF9F@cluster0.qmlznhh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+mongoose.connect('');
 
 app.post('/register', async (req, res) => {
     const {username, password} = req.body;
@@ -95,7 +95,3 @@ app.get('/post', async (req,res) => {
 );
 });
 app.listen(4000);
-
-// C2AvLEpXjgiOVF9F
-// mongodb+srv://blog:<password>@cluster0.qmlznhh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-// mongodb+srv://blog:C2AvLEpXjgiOVF9F@cluster0.qmlznhh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
